@@ -13,23 +13,23 @@ abstract public class Animal extends Renderable implements ILocation, IClassific
   abstract public String Interact ();
   
   //!!! consider removing interface ILocation
-  public Integer GetX(){
+  public int GetX(){
     return position.x;
   }
   
-  public Integer GetY(){
+  public int GetY(){
     return position.y;
   }
   
-  public void SetX(Integer _x){
+  public void SetX(int _x){
     position.x = _x;
   }
   
-  public void SetY(Integer _y){
+  public void SetY(int _y){
     position.y = _y;
   }
   
-  public void SetXY(Integer _x, Integer _y){
+  public void SetXY(int _x, int _y){
     position.x = _x;
     position.y = _y;
   }
@@ -46,7 +46,7 @@ abstract public class Animal extends Renderable implements ILocation, IClassific
     return classification.species;
   }
   
-  public Integer GetWeight(){
+  public int GetWeight(){
     return diet.weight;
   }
   

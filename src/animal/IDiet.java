@@ -27,7 +27,7 @@ public interface IDiet {
   
   /**
    * @brief getter for weight
-   * @return integer
+   * @return int
    */
-  Integer GetWeight();
+  int GetWeight();
 }

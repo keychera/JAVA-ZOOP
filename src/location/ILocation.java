@@ -3,26 +3,26 @@ package location;
 public interface ILocation {
 	/**
 	   * @brief getter for X value
-	   * @return integer
+	   * @return int
 	   */
-  public Integer GetX();
+  public int GetX();
 	  /**
 	   * @brief getter for Y value
-	   * @return integer
+	   * @return int
 	   */
-  public Integer GetY();
+  public int GetY();
 	  /**
 	   * @brief setter for X value
 	   * @param x
 	   * @return void
 	   */
-  public void SetX(Integer _x);
+  public void SetX(int _x);
 	  /**
 	   * @brief setter for Y value
 	   * @param y
 	   * @return void
 	   */
-  public void SetY(Integer _y);
+  public void SetY(int _y);
 	  
 	    /**
 	   * @brief setter for X and Y value simultaneously
@@ -30,5 +30,5 @@ public interface ILocation {
 	   * @param y
 	   * @return void
 	   */
-  public void SetXY(Integer _x,Integer _y);
+  public void SetXY(int _x,int _y);
 }
