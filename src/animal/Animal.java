@@ -21,17 +21,17 @@ abstract public class Animal extends Renderable implements ILocation, IClassific
     return position.y;
   }
   
-  public void SetX(int _x){
-    position.x = _x;
+  public void SetX(int x){
+    this.position.x = x;
   }
   
-  public void SetY(int _y){
-    position.y = _y;
+  public void SetY(int y){
+    this.position.y = y;
   }
   
-  public void SetXY(int _x, int _y){
-    position.x = _x;
-    position.y = _y;
+  public void SetXY(int x, int y){
+    this.position.x = x;
+    this.position.y = y;
   }
   
   public String GetFamily(){

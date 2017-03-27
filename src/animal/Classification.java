@@ -5,9 +5,9 @@ public class Classification{
   public final String genus;
   public final String species;
   
-  public Classification(String _family,String _genus,String _species){
-    family = _family;
-    genus = _genus;
-    species = _species;
+  public Classification(String family,String genus,String species){
+    this.family = family;
+    this.genus = genus;
+    this.species = species;
   }
 }

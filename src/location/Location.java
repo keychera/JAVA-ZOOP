@@ -17,12 +17,12 @@ public class Location {
   public int y;
   
   public Location(){
-    x = 0;
-    y = 0;
+    this.x = 0;
+    this.y = 0;
   }
   
-  public Location(int _x,int _y){
-    x = _x;
-    y = _y;
+  public Location(int x,int y){
+    this.x = x;
+    this.y = y;
   }
 }

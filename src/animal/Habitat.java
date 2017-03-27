@@ -5,38 +5,38 @@ public class Habitat{
   public final boolean water;
   public final boolean flying;
   
-  public Habitat(boolean _land, boolean _water, boolean _flying){
-    land = _land;
-    water = _water;
-    flying = _flying;
+  public Habitat(boolean land, boolean water, boolean flying){
+    this.land = land;
+    this.water = water;
+    this.flying = flying;
   }
   
   public Habitat(String key){
     switch(key){
       case "land":
       case "Land":
-        land = true;
-        water = false;
-        flying = false;
+        this.land = true;
+        this.water = false;
+        this.flying = false;
         break;
       case "water":
       case "Water":
-        land = false;
-        water = true;
-        flying = false;
+        this.land = false;
+        this.water = true;
+        this.flying = false;
         break;
       case "air":
       case "Air":
       case "flying":
       case "Flying":
-        land = false;
-        water = false;
-        flying = true;
+        this.land = false;
+        this.water = false;
+        this.flying = true;
         break;
       default:
-        land = false;
-        water = false;
-        flying = false;
+        this.land = false;
+        this.water = false;
+        this.flying = false;
     }
   }
 }
