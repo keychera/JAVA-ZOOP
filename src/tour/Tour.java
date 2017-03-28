@@ -1,17 +1,22 @@
 package tour;
+import animal.Animal;
 import cell.Cell;
 import location.Location;
 import pathfinder.*;
+import zoo.Cage;
+import zoo.Zoo;
 
 public class Tour{
+  Zoo zoo_ref;
   Cell cells[];
   Location route[];
   int route_distance;
   int route_pointer;
   static final String DIRECTIONS[] = {"south","east","west","north"};
   
-  public Tour(Cell cells[],int width,int length) {
-    this.cells = cells;
+  public Tour(Zoo zoo_ref,int width,int length) {
+    this.zoo_ref = zoo_ref;
+    this.cells = zoo_ref.GetCells();
     Path areaForPathFinding[] = new Path [width * length];
     for(int i = 0;i < width * length;i++){
       int label;
@@ -24,7 +29,6 @@ public class Tour{
       }
       areaForPathFinding[i] = new Path(cells[i].GetX(),cells[i].GetY(),label);
     }
-    
     
     PathFinder findingMachine = new PathFinder(areaForPathFinding,width,length);
     Path route_found[] = findingMachine.getRoute();
@@ -125,7 +129,19 @@ public class Tour{
   }
 
   public void InteractWithHabitat(Cell c) {
-    System.out.println("\tNO CAGES YET");
+    int index = zoo_ref.GetIndexCage(c.GetX(), c.GetY());
+    if (index < zoo_ref.GetNCages()){
+      Cage cage = zoo_ref.GetCages()[index];
+      Animal[] animals = cage.GetAnimals();
+      int animalNum = cage.GetNAnimal();
+      for(int i = 0;i < animalNum;i++){
+        System.out.print(animals[i].GetGenus());
+        System.out.print(" ");
+        System.out.print(animals[i].GetSpecies());
+        System.out.print(" : ");
+        System.out.println(animals[i].Interact());
+      }
+    }
   }
   
   public void RestartRoute() {

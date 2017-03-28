@@ -4,11 +4,11 @@ import animal.*;
 import location.Location;
 
 public class Cat extends Animal {
-  Cat(){
+  public Cat(){
     this(10);
   }
   
-  Cat(int weight){
+  public Cat(int weight){
     position = new Location();
     classification = new Classification("Felidae","Felis","Catus");
     dietStatus = new DietStatus(weight,true,false);

@@ -15,8 +15,6 @@ import java.nio.charset.Charset;
 import java.util.Random;
 import location.Location;
 
-import animal.Animal;
-
 /**
  * @file	zoo.h
  * @author	Harum Lokawati
@@ -56,6 +54,15 @@ public class Zoo {
         this.NCages = 0;
         this.Cages = new Cage[DEFSIZE];
     }
+    
+    /**
+     * addition by kevin erdiza
+     * for unit testing without external file 
+     */
+    public void InitializeZoo(Cell cells[]){
+      Cells = cells;
+    }
+        
     /**
      * map reader and initialize
      * this will read txt file and initialize all its Cells
@@ -184,7 +191,6 @@ public class Zoo {
      */
     public Cell AccessCell(int x,int y)
     {
-<<<<<<< HEAD
         int i = 0;
         boolean found = false;
         while ((i < width*length) && !found)
@@ -204,10 +210,6 @@ public class Zoo {
         {
             return null;
         }
-=======
-        
-      return null;
->>>>>>> baeb949bd5885dfb0470416660e211517ca65271
     }
     /**
      * cage maker
@@ -464,7 +466,6 @@ public class Zoo {
      */
     public int GetIndexCage(int x,int y)
     {
-<<<<<<< HEAD
         Location L = new Location(x,y);
         boolean found = false;
         int i = 0;
@@ -479,10 +480,6 @@ public class Zoo {
             }
         }
         return i;
-=======
-      
-      return 0;
->>>>>>> baeb949bd5885dfb0470416660e211517ca65271
     }
     /**
      * this will print element zoo in location(x,y)
