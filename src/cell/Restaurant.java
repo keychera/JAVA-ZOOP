@@ -3,7 +3,7 @@ package cell;
  * @class	Restaurant
  * @brief	class to define Facility as Restaurant
  */
-class Restaurant extends Facility{
+public class Restaurant extends Facility{
    /**
     * @brief default constructor
     * construct Facility

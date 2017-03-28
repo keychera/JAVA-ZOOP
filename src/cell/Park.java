@@ -8,7 +8,7 @@ package cell;
  * @version     VZ03
  * 
  */
-class Park extends Facility{
+public class Park extends Facility{
    /**
 	* @brief default constructor
 	* construct Facility

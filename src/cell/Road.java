@@ -3,7 +3,7 @@ package cell;
  * @class	Road
  * @brief	class to define Facility as Road
  */
-class Road extends Facility{
+public class Road extends Facility{
    /**
     * @brief default constructor
     * construct Facility

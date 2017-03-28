@@ -10,14 +10,9 @@ import location.*;
  * @version     VZ03
  * 
  */
-<<<<<<< HEAD
-abstract class Cell extends Renderable implements ILocation {
+public abstract class Cell extends Renderable implements ILocation {
     protected int x;
     protected int y;
-=======
-
-public abstract class Cell extends Renderable {
->>>>>>> fedb4426d1b4d385112d831885bcba42302bec4b
     /**
      * default constructor
      * construct Renderable and Location
@@ -25,15 +20,18 @@ public abstract class Cell extends Renderable {
     public Cell()
     {
         super();
+        x=0;
+        y=0;
     }
     /**
      * constructor with parameter ,construct Cell and set Location(x,y)
-     * @param x 
-     * @param y 
+     * @param _x 
+     * @param _y 
      */
-    public Cell(int x, int y)
+    public Cell(int _x, int _y)
     {
-       
+       this.x=_x;
+       this.y=_y;
     }
     /**
      * pure virtual for name getter
@@ -50,43 +48,43 @@ public abstract class Cell extends Renderable {
 	   * @brief getter for X value
 	   * @return int
 	   */
-  public int GetX()
-  {
-      return x;
-  }
+    public int GetX()
+    {
+        return x;
+    }
 	  /**
 	   * @brief getter for Y value
 	   * @return int
 	   */
-  public int GetY()
-  {
-      return y;
-  }
+    public int GetY()
+    {
+        return y;
+    }
 	  /**
 	   * @brief setter for X value
 	   * @param _x
 	   */
-  public void SetX(int _x)
-  {
-      this.x=_x;
-  }
+    public void SetX(int _x)
+    {
+        this.x=_x;
+    }
 	  /**
 	   * @brief setter for Y value
 	   * @param _y
 	   */
-  public void SetY(int _y)
-  {
-      this.y=_y;
-  }
+    public void SetY(int _y)
+    {
+        this.y=_y;
+    }
 	  
 	    /**
 	   * @brief setter for X and Y value simultaneously
 	   * @param _x
 	   * @param _y
 	   */
-  public void SetXY(int _x,int _y)
-  {
-      this.x=_x;
-      this.y=_y;
-  }
+    public void SetXY(int _x,int _y)
+    {
+        this.x=_x;
+        this.y=_y;
+    }
 };
