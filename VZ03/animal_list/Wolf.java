@@ -24,7 +24,7 @@ public class Wolf extends Animal{
 
 	  @Override
 	  public void Render() {
-	    System.out.print('F');
+	    System.out.print('W');
 	  }
 }
 
