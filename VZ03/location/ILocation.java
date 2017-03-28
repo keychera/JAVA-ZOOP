@@ -13,22 +13,19 @@ public interface ILocation {
   public int GetY();
 	  /**
 	   * @brief setter for X value
-	   * @param x
-	   * @return void
+	   * @param _x
 	   */
   public void SetX(int _x);
 	  /**
 	   * @brief setter for Y value
-	   * @param y
-	   * @return void
+	   * @param _y
 	   */
   public void SetY(int _y);
 	  
 	    /**
 	   * @brief setter for X and Y value simultaneously
-	   * @param X
-	   * @param y
-	   * @return void
+	   * @param _x
+	   * @param _y
 	   */
   public void SetXY(int _x,int _y);
 }
