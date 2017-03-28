@@ -10,12 +10,11 @@ package cell;
  * @author	Harum Lokawati
  * @date	March 2017
  * @version     VZ03
- * @class	LandHabitat
  * @brief	the header file containing class declaration LandHabitat
  */
 public class LandHabitat extends Habitat {
         /**
-	 * @brief default construstor
+	 * default construstor
 	 * this will construct Habitat
 	 */
     public LandHabitat()

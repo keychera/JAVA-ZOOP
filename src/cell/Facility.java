@@ -12,7 +12,7 @@ package cell;
  * @class	Facility
  * @brief	acstract class of Facility as one of Cell type
  */
-abstract class Facility extends Cell{
+public abstract class Facility extends Cell{
    /**
     * @brief default construstor
     * construct Cell
@@ -23,7 +23,7 @@ abstract class Facility extends Cell{
     }
    /**
     * pure virtual function getter for type
-    * @
+    * @return String 
     */
     abstract public String GetType();
    /**

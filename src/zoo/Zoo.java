@@ -392,70 +392,70 @@ public class Zoo {
     }
     public void AddAnimaltoZoo(Animal A)
     {
-        if(A.IsLand())
-        {
-            boolean found = false;
-            Random rand = new Random();
-            int i = rand.nextInt(NCages);
-            int count = 0;
-            while((count < NCages) && (!found))
+            if(A.IsLand())
             {
-                if((Cages[i].GetHabitat().equals("LandHabitat")) && (Cages[i].GetNAnimal() < (Cages[i].GetSize()*2/3)))
+                boolean found = false;
+                Random rand = new Random();
+                int i = rand.nextInt(NCages);
+                int count = 0;
+                while((count < NCages) && (!found))
                 {
-                    found = true;
-                }else
-                {
-                    i = (i + 1) % NCages;
+                    if((Cages[i].GetHabitat().equals("LandHabitat")) && (Cages[i].GetNAnimal() < (Cages[i].GetSize()*2/3)))
+                    {
+                        found = true;
+                    }else
+                    {
+                        i = (i + 1) % NCages;
+                    }
+                    count++;
                 }
-                count++;
-            }
-            if(count <= NCages)
-            {
-                Cages[i].AddAnimal(A);
-            }
-        }else if(A.IsWater())
-        {
-            boolean found = false;
-            Random rand = new Random();
-            int i = rand.nextInt(NCages);
-            int count = 0;
-            while((count < NCages) && (!found))
-            {
-                if((Cages[i].GetHabitat().equals("WaterHabitat")) && (Cages[i].GetNAnimal() < (Cages[i].GetSize()*2/3)))
+                if(count < NCages)
                 {
-                    found = true;
-                }else
-                {
-                    i = (i + 1) % NCages;
+                    Cages[i].AddAnimal(A);
                 }
-                count++;
-            }
-            if(count <= NCages)
+            }else if(A.IsWater())
             {
-                Cages[i].AddAnimal(A);
-            }
-        }else
-        {
-            boolean found = false;
-            Random rand = new Random();
-            int i = rand.nextInt(NCages);
-            int count = 0;
-            while((count < NCages) && (!found))
-            {
-                if((Cages[i].GetHabitat().equals("AirHabitat")) && (Cages[i].GetNAnimal() < (Cages[i].GetSize()*2/3)))
+                boolean found = false;
+                Random rand = new Random();
+                int i = rand.nextInt(NCages);
+                int count = 0;
+                while((count < NCages) && (!found))
                 {
-                    found = true;
-                }else
-                {
-                    i = (i + 1) % NCages;
+                    if((Cages[i].GetHabitat().equals("WaterHabitat")) && (Cages[i].GetNAnimal() < (Cages[i].GetSize()*2/3)))
+                    {
+                        found = true;
+                    }else
+                    {
+                        i = (i + 1) % NCages;
+                    }
+                    count++;
                 }
-                count++;
-            }
-            if(count <= NCages)
+                if(count < NCages)
+                {
+                    Cages[i].AddAnimal(A);
+                }
+            }else
             {
-                Cages[i].AddAnimal(A);
+                boolean found = false;
+                Random rand = new Random();
+                int i = rand.nextInt(NCages);
+                int count = 0;
+                while((count < NCages) && (!found))
+                {
+                    if((Cages[i].GetHabitat().equals("AirHabitat")) && (Cages[i].GetNAnimal() < (Cages[i].GetSize()*2/3)))
+                    {
+                        found = true;
+                    }else
+                    {
+                        i = (i + 1) % NCages;
+                    }
+                    count++;
+                }
+                if(count < NCages)
+                {
+                    Cages[i].AddAnimal(A);
+                }
             }
-        }
     }
     /**
      * @brief Cage Index getter 

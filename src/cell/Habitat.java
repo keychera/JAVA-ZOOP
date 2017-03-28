@@ -12,7 +12,7 @@ package cell;
  * @class	Habitat
  * @brief	acstract class of Habitat as one of Cell
  */
-abstract class Habitat extends Cell{
+public abstract class Habitat extends Cell{
     /**
 	 * @brief default construstor
 	 * this will construct Cell
