@@ -3,7 +3,7 @@ package animal;
 import renderable.*;
 import location.*;
 
-abstract public class Animal extends Renderable implements ILocation, IClassification, IDiet, IHabitat, ITameStatus{
+abstract public class Animal extends Renderable implements ILocation, IClassification, IDietStatus, IHabitatStatus, ITameStatus{
   protected Location position;
   protected Classification classification;
   protected DietStatus dietStatus;

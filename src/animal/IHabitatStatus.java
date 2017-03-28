@@ -7,7 +7,7 @@ package animal;
  * that contain three bool value depicting the three habitat an animal can live:
  * Land, Water, and Flying (Air)
  */
-public interface IHabitat {
+public interface IHabitatStatus {
   /**
    * @brief this will return whether the animal can live on land or not
    */

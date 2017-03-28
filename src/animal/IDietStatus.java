@@ -6,7 +6,7 @@ package animal;
  * @brief interface for animal to have dietary properties
  * animal can have either meat diet or plant diet or both
  */
-public interface IDiet {
+public interface IDietStatus {
   /**
    * @brief this will return whether the animal has meatdiet or not
    * @return bool
