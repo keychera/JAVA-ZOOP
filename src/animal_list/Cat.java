@@ -11,8 +11,8 @@ public class Cat extends Animal {
   Cat(int weight){
     position = new Location();
     classification = new Classification("Felidae","Felis","Catus");
-    diet = new Diet(weight,true,false);
-    habitat = new Habitat("land");
+    dietStatus = new DietStatus(weight,true,false);
+    habitatStatus = new HabitatStatus("land");
   }
 
   @Override

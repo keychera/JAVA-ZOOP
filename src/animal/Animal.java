@@ -3,11 +3,11 @@ package animal;
 import renderable.*;
 import location.*;
 
-abstract public class Animal extends Renderable implements ILocation, IClassification, IDiet, IHabitat, ITameStatus{
+abstract public class Animal extends Renderable implements ILocation, IClassification, IDietStatus, IHabitatStatus, ITameStatus{
   protected Location position;
   protected Classification classification;
-  protected Diet diet;
-  protected Habitat habitat;
+  protected DietStatus dietStatus;
+  protected HabitatStatus habitatStatus;
   protected boolean tame_status;
   
   abstract public String Interact ();
@@ -47,31 +47,31 @@ abstract public class Animal extends Renderable implements ILocation, IClassific
   }
   
   public int GetWeight(){
-    return diet.weight;
+    return dietStatus.weight;
   }
   
   public boolean IsCarnivore(){
-    return diet.meat_diet && !diet.plant_diet;
+    return dietStatus.meat_diet && !dietStatus.plant_diet;
   }
   
   public boolean IsHerbivore(){
-    return diet.plant_diet && !diet.meat_diet;
+    return dietStatus.plant_diet && !dietStatus.meat_diet;
   }
   
   public boolean IsOmnivore(){
-    return diet.meat_diet && diet.plant_diet;
+    return dietStatus.meat_diet && dietStatus.plant_diet;
   }
   
   public boolean IsFlying(){
-    return habitat.flying;
+    return habitatStatus.flying;
   }
   
   public boolean IsLand(){
-    return habitat.land;
+    return habitatStatus.land;
   }
   
   public boolean IsWater(){
-    return habitat.water;
+    return habitatStatus.water;
   }
   
   public boolean IsTame(){

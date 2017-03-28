@@ -10,9 +10,14 @@ import location.*;
  * @version     VZ03
  * 
  */
+<<<<<<< HEAD
 abstract class Cell extends Renderable implements ILocation {
     protected int x;
     protected int y;
+=======
+
+public abstract class Cell extends Renderable {
+>>>>>>> fedb4426d1b4d385112d831885bcba42302bec4b
     /**
      * default constructor
      * construct Renderable and Location
