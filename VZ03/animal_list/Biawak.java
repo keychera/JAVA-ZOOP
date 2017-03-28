@@ -3,25 +3,25 @@ package animal_list;
 import animal.*;
 import location.Location;
 
-public class Tiger extends Animal {
-  public Tiger(){
-    this(10);
+public class Biawak extends Animal {
+  public Biawak(){
+    this(35);
   }
   
-  public Tiger(int weight){
+  public Biawak(int weight){
     position = new Location();
-    classification = new Classification("Felidae","Felis","tigris");
+    classification = new Classification("Varanidae","Varanus","cerambonensis");
     dietStatus = new DietStatus(weight,true,false);
     habitatStatus = new HabitatStatus("land");
   }
 
   @Override
   public String Interact() {
-	  return "COURAGEOUS RAWR";
+	  return "MORE TERRIFYING HSSS";
   }
 
   @Override
   public void Render() {
-    System.out.print('T');
+    System.out.print('b');
   }
 }

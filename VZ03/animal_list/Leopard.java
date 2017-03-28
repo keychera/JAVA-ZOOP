@@ -3,25 +3,25 @@ package animal_list;
 import animal.*;
 import location.Location;
 
-public class Cheetah extends Animal {
-  public Cheetah(){
+public class Leopard extends Animal {
+  public Leopard(){
     this(20);
   }
   
-  public Cheetah(int weight){
+  public Leopard(int weight){
     position = new Location();
-    classification = new Classification("Felidae","Acinonyx","jubatus");
+    classification = new Classification("Felidae","Panthera","pardus");
     dietStatus = new DietStatus(weight,true,false);
     habitatStatus = new HabitatStatus("land");
   }
 
   @Override
   public String Interact() {
-    return "*slightly soft* RAWR";
+	  return "MAJESTIC RAWR";
   }
 
   @Override
   public void Render() {
-    System.out.print('C');
+    System.out.print('l');
   }
 }
