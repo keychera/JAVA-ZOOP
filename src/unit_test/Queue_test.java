@@ -68,6 +68,39 @@ public class Queue_test {
     
     assertFalse(test.Search(Integer.valueOf(6)));
     assertFalse(test.Search(Integer.valueOf(-6)));
+    
+    test.Dequeue();
+    test.Dequeue();
+    
+    assertTrue(test.Search(Integer.valueOf(0)));
+    assertTrue(test.Search(Integer.valueOf(4)));
+    
+    assertFalse(test.Search(Integer.valueOf(-4)));
+    assertFalse(test.Search(Integer.valueOf(6)));
+    assertFalse(test.Search(Integer.valueOf(-6)));
+    
+    
   }
 
+  @Test
+  public void testPeek() {
+    Queue<Integer> test = new Queue<Integer>();
+    assertNull(test.Peek(3));
+    
+    for(int i = -5;i < 6;i++){
+      test.Enqueue(i);
+    }
+    
+    assertEquals(Integer.valueOf(-3),test.Peek(2));
+    assertEquals(Integer.valueOf(0),test.Peek(5));
+    assertEquals(Integer.valueOf(4),test.Peek(9));
+    assertNull(test.Peek(11));
+    
+    test.Dequeue();
+    test.Dequeue();
+    
+    assertEquals(Integer.valueOf(-1),test.Peek(2));
+    assertEquals(Integer.valueOf(2),test.Peek(5));
+    assertNull("Peeking beyond element_count result in non null values",test.Peek(9));
+  }
 }

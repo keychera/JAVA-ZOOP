@@ -15,6 +15,8 @@ import java.nio.charset.Charset;
 import java.util.Random;
 import location.Location;
 
+import animal.Animal;
+
 /**
  * @file	zoo.h
  * @author	Harum Lokawati
@@ -182,6 +184,7 @@ public class Zoo {
      */
     public Cell AccessCell(int x,int y)
     {
+<<<<<<< HEAD
         int i = 0;
         boolean found = false;
         while ((i < width*length) && !found)
@@ -201,6 +204,10 @@ public class Zoo {
         {
             return null;
         }
+=======
+        
+      return null;
+>>>>>>> baeb949bd5885dfb0470416660e211517ca65271
     }
     /**
      * cage maker
@@ -457,6 +464,7 @@ public class Zoo {
      */
     public int GetIndexCage(int x,int y)
     {
+<<<<<<< HEAD
         Location L = new Location(x,y);
         boolean found = false;
         int i = 0;
@@ -471,6 +479,10 @@ public class Zoo {
             }
         }
         return i;
+=======
+      
+      return 0;
+>>>>>>> baeb949bd5885dfb0470416660e211517ca65271
     }
     /**
      * this will print element zoo in location(x,y)

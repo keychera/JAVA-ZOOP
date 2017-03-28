@@ -21,7 +21,7 @@ public class Queue<E> {
       tail.item = item;
     } else
     if (element_count == 1){
-      tail.item = item;
+      tail = new QueueItem<E>(item);
       head.nextItem = tail;
       tail.prevItem = head;
     } else {
@@ -55,11 +55,45 @@ public class Queue<E> {
   
   public boolean Search(E item){
     boolean found = false;
-    QueueItem<E> traverse = head;
-    while ((traverse != null) && (!found)){
-      found = (traverse.item == item);
-      if (!found) traverse = traverse.nextItem;
+    if (element_count != 0){
+      QueueItem<E> traverse = head;
+      while ((traverse != null) && (!found)){
+        found = (traverse.item.equals(item));
+        if (!found) traverse = traverse.nextItem;
+      }
     }
     return found;
+  }
+  
+  public E Peek(int idx){
+    if (element_count != 0){
+      QueueItem<E> checking = head;
+      for(int i = 0;i < idx;i++){
+        checking = checking.nextItem;
+        if (checking == null) return null;
+      }
+      return checking.item;
+    } else {
+      return null;
+    }
+  }
+
+  public E PeekTail() {
+    return Peek(element_count - 1);
+  }
+
+  public int IdxSearch(E item) {
+    int idx = -1;
+    if (element_count != 0){
+      QueueItem<E> traverse = head;
+      boolean found = false;
+      while ((traverse != null) && (!found )){
+        idx++;
+        found = (traverse.item.equals(item));
+        if (!found) traverse = traverse.nextItem;
+      }
+      if (!found) idx = -1;
+    }
+    return idx;
   }
 }
