@@ -24,7 +24,7 @@ public class BadakJawa extends Animal{
 
 	  @Override
 	  public void Render() {
-	    System.out.print('S');
+	    System.out.print('J');
 	  }
 }
 

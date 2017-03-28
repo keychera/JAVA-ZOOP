@@ -24,7 +24,7 @@ public class RedFox extends Animal{
 
 	  @Override
 	  public void Render() {
-	    System.out.print('f');
+	    System.out.print('F');
 	  }
 }
 

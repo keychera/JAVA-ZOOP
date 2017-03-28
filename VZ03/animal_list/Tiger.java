@@ -4,14 +4,14 @@ import animal.*;
 import location.Location;
 
 
-public class Wolf extends Animal{
-	public Wolf(){
-	this (20);
+public class Tiger extends Animal{
+	public Tiger(){
+	this (30);
 	}
 	
-	public Wolf(int weight){
+	public Tiger(int weight){
 	    position = new Location();
-	    classification = new Classification("Canidae","Canis","lupus");
+	    classification = new Classification("Felidae","Panthera","tigris");
 	    dietStatus = new DietStatus(weight,true,false);
 	    habitatStatus = new HabitatStatus("land");
 	    tame_status = false;
@@ -19,12 +19,12 @@ public class Wolf extends Animal{
 	
 	  @Override
 	  public String Interact() {
-	    return "A STANDARD RAWR";
+	    return "COURAGEOUS RAWR";
 	  }
 
 	  @Override
 	  public void Render() {
-	    System.out.print('F');
+	    System.out.print('T');
 	  }
 }
 

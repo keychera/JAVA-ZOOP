@@ -13,6 +13,7 @@ public class Cat extends Animal {
     classification = new Classification("Felidae","Felis","Catus");
     dietStatus = new DietStatus(weight,true,false);
     habitatStatus = new HabitatStatus("land");
+    tame_status = true;
   }
 
   @Override

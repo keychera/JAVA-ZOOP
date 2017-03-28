@@ -24,7 +24,7 @@ public class ArcticFox extends Animal{
 
 	  @Override
 	  public void Render() {
-	    System.out.print('K');
+	    System.out.print('f');
 	  }
 }
 
