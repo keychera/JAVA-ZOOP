@@ -30,4 +30,9 @@ public interface IDietStatus {
    * @return int
    */
   int GetWeight();
+  
+  /**
+   * @brief setter for weight
+   */
+  void SetWeight(int weight);
 }
