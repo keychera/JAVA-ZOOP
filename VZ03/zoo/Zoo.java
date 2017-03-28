@@ -345,7 +345,7 @@ public class Zoo {
                 }else if(hewan == 'd')
                 {
                   A = new Damselfish();
-                }else if(hewan == t')
+                }else if(hewan == 't')
                 {
                   A = new Coyote();
                 }else if(hewan =='W')
