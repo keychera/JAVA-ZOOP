@@ -11,7 +11,7 @@ import renderable.*;
  * 
  */
 
-abstract class Cell extends Renderable {
+public abstract class Cell extends Renderable {
     /**
      * default constructor
      * construct Renderable and Location
