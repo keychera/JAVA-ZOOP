@@ -284,10 +284,20 @@ public class Zoo {
                 }
                 //membuat array temp untuk menyimpan cage lama
                 Cage[] temp = new Cage[NCages];
-                System.arraycopy(Cages, 0, temp, 0, NCages - 1); 
+                int p;
+                for( p = 0; p < (NCages - 1); p++)
+                {
+                  temp[p] = Cages[p];
+                }
+                temp[p] = C;
+                //System.arraycopy(Cages, 0, temp, 0, NCages - 1); 
                 //menginisialisasi ukuran baru dan memaskkan temp ke cages
                 Cages = new Cage[NCages];
-                System.arraycopy(temp, 0, Cages, 0, NCages);
+                for(i = 0; i < NCages; i++)
+                {
+                  Cages[i] = temp[i];
+                }
+                //System.arraycopy(temp, 0, Cages, 0, NCages);
             }
             check[count] = true;
             count++;
@@ -309,16 +319,17 @@ public class Zoo {
                         Charset.forName("UTF-8")));
 	char hewan;
 	int n_hewan;
-          do {
-            hewan = reader.readLine().charAt(0);
-            n_hewan = ((int) reader.readLine().charAt(1) - 48);
+        String str;
+          while((str = reader.readLine()) != null && (str.length() != 0)) {
+            hewan = str.charAt(0);
+            n_hewan = ((int) str.charAt(1));
             Animal A;
             for(int i = 1; i <= n_hewan; i++)
             {
                 if(hewan == 'c')
                 {
                   A = new Cat();
-                }else if(hewan == 'C')
+                }/*else if(hewan == 'C')
                 {
                   A = new Cheetah();
                 }else if(hewan == 'L')
@@ -384,10 +395,11 @@ public class Zoo {
                 }else
                 {
                   A = new Axolotl();
-                }
+                }*/
+                A = new Cat();
                 AddAnimaltoZoo(A);
           }
-        }while (reader!=null);
+        }
       reader.close();
     }
     public void AddAnimaltoZoo(Animal A)
