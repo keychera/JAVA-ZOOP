@@ -25,7 +25,7 @@ public class AirHabitat extends Habitat{
      */
     public void Render()
     {
-        System.out.print("a");
+        System.out.print("*");
     }
     /**
      * type getter 
