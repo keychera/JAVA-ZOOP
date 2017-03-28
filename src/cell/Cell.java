@@ -35,15 +35,15 @@ public abstract class Cell extends Renderable implements ILocation {
     }
     /**
      * pure virtual for name getter
-     * @
+     * @return String
      */
 
-    abstract String GetName();
+    public abstract String GetName();
     /**
      * pure virtual for type getter
-     * @ 
+     * @return String
      */
-    abstract String GetType();
+    public abstract String GetType();
     	/**
 	   * @brief getter for X value
 	   * @return int
