@@ -8,7 +8,7 @@ package cell;
  * @version     VZ03
  * 
  */
-class Exit extends Road{
+public class Exit extends Road{
    /**
     * @brief default constructor
     * construct Road

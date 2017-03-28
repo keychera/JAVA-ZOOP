@@ -33,5 +33,5 @@ abstract class Habitat extends Cell{
         /**
 	 * @brief pure virtual function for type getter
 	 */
-    abstract String GetType();
+    public abstract String GetType();
 };
