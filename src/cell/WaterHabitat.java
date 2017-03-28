@@ -5,7 +5,7 @@ package cell;
  */
 public class WaterHabitat extends Habitat{
         /**
-	 * default construstor
+	 * default constructor
 	 * this will construct Habitat
          * @
 	 */
@@ -14,7 +14,7 @@ public class WaterHabitat extends Habitat{
           super();
       }
         /**
-	 * fuction to print 
+	 * function to print 
 	 * this will return "~"
          * @
 	 */

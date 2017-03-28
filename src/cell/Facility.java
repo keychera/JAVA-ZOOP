@@ -19,7 +19,7 @@ abstract class Facility extends Cell{
     */
     public Facility()
     {
-        
+        super();
     }
    /**
     * pure virtual function getter for type

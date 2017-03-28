@@ -1,14 +1,19 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package cell;
+
 /**
  * @file	LandHabitat.java
  * @author	Harum Lokawati
  * @date	March 2017
- * @version VZ03
- * 
+ * @version     VZ03
+ * @class	LandHabitat
  * @brief	the header file containing class declaration LandHabitat
  */
-
-public class LandHabitat extends Habitat{
+public class LandHabitat extends Habitat {
         /**
 	 * @brief default construstor
 	 * this will construct Habitat
@@ -20,8 +25,7 @@ public class LandHabitat extends Habitat{
        /**
 	 * @brief fuction to print 
 	 * this will return "l"
-         * @return void
-		 */
+         */
     public void Render()
     {
         System.out.print('^');
