@@ -15,8 +15,6 @@ import java.nio.charset.Charset;
 import java.util.Random;
 import location.Location;
 
-import animal.Animal;
-
 /**
  * @file	zoo.h
  * @author	Harum Lokawati
@@ -56,6 +54,15 @@ public class Zoo {
         this.NCages = 0;
         this.Cages = new Cage[DEFSIZE];
     }
+    
+    /**
+     * addition by kevin erdiza
+     * for unit testing without external file 
+     */
+    public void InitializeZoo(Cell cells[]){
+      Cells = cells;
+    }
+        
     /**
      * map reader and initialize
      * this will read txt file and initialize all its Cells
