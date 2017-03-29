@@ -8,7 +8,6 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.RandomAccessFile;
 import java.nio.charset.Charset;
@@ -75,31 +74,30 @@ public class Zoo {
         int i = 0;
         int j = 0;
         int templength = 0;
-        RandomAccessFile raf = new RandomAccessFile("map.txt","r");
-        raf.seek(0);
-        panjang = (int) raf.length();
-        raf.close();
-        Cells = new Cell[panjang];
-        File f = new File("map.txt");
-        BufferedReader reader;
-        reader = new BufferedReader(
-                    new InputStreamReader(
-                            new FileInputStream(f),
-                            Charset.forName("UTF-8")));
+        File f = new File(filename);
+        FileInputStream fis = null;
         try {
             int c;
-            while((c = reader.read()) != -1) {
+            fis = new FileInputStream(f);
+            Cells = new Cell[fis.available()];
+            for(;;){
+              c = fis.read();
+              if(c== -1)
+              {
+                break;
+              }
               char character = (char) c;
-              if(c == '\n')
+              if(character == '\n')
               {
                   i++;
+                  j--;
                   if(i == 1)
                   {
                       templength = j;
                   }
               }else
               {
-                  switch (c) {
+                  switch (character) {
                       case 'a':
                           Cells[j] = new AirHabitat();
                           break;
@@ -128,14 +126,24 @@ public class Zoo {
                   j++;
               }
             }
+        }catch(IOException e)
+        {
+          e.printStackTrace();
         }finally {
-            if(reader != null)
+            try{
+              if(fis != null)
+              {
+                  fis.close();
+              }
+            }catch (IOException ex)
             {
-                reader.close();
+              ex.printStackTrace();
             }
         }
         this.length = templength ;
+        System.out.println(length);
         this.width = i;
+        System.out.println(width);
         for(i = 0; i < j; i++)
         {
             Cells[i].SetXY(i % this.length, i / this.length);
@@ -311,14 +319,14 @@ public class Zoo {
      */
     public void ReadAnimal(String filename) throws IOException
     {
-        File f = new File("animal.txt");
+        File f = new File(filename);
         BufferedReader reader;
         reader = new BufferedReader(
                     new InputStreamReader(
                         new FileInputStream(f),
                         Charset.forName("UTF-8")));
-	char hewan;
-	int n_hewan;
+      	char hewan;
+      	int n_hewan;
         String str;
           while((str = reader.readLine()) != null && (str.length() != 0)) {
             hewan = str.charAt(0);
@@ -518,23 +526,23 @@ public class Zoo {
                     {
                       iAn = k;
                     }
-                }
+                  }
                 //cout<<"ada animal"<<endl;
-              }
-              //cout<<"done";
-              if(iAn != (-1))//ada animal
-              {
-                Cages[indeks].GetAnimals()[iAn].Render();
+                }
+                //cout<<"done";
+                if(iAn != (-1))//ada animal
+                {
+                  Cages[indeks].GetAnimals()[iAn].Render();
+                }else
+                {
+                  Cells[i * length + j].Render();
+                }
               }else
               {
+                //cout<<"non";
                 Cells[i * length + j].Render();
               }
-            }else
-            {
-              //cout<<"non";
-              Cells[i * length + j].Render();
-            }
-            System.out.print(' ');
+              System.out.print(' ');
           }
           System.out.print('\n');
         }

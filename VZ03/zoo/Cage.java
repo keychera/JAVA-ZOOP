@@ -6,8 +6,8 @@ import java.util.Random;
 
 /**
  * class Cage contains animals and locations to form cage for zoo
- * @author	Harum Lokawati
- * @since	March 2017
+ * @author	    Harum Lokawati
+ * @since	      March 2017
  * @version     VZ03
  * 	
  */
@@ -164,7 +164,7 @@ public class Cage{
                 int j = 0;
                 while( ok && (j < this.NAnimal))
                 {
-                    if(this.Animals[j].GetSpecies().equals(A.GetSpecies()))
+                    if(!this.Animals[j].GetSpecies().equals(A.GetSpecies()))
                     {
                         ok = false;
                     }
