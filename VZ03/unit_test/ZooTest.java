@@ -182,9 +182,11 @@ public class ZooTest {
     public void testReadEx() throws Exception {
         System.out.println("ReadAnimal");
         Zoo instance = new Zoo();
-        instance.ReadZoo("E:/Tubes OOP/JAVA-ZOOP/VZ03/zoo/map.txt");
+        String path = ZooTest.class.getProtectionDomain().getCodeSource().getLocation().getPath();
+        path = path.replaceAll("%20", " ");
+        instance.ReadZoo(path + "map.txt");
         instance.MakeCage();
-        instance.ReadAnimal("E:/Tubes OOP/JAVA-ZOOP/VZ03/zoo/map_animal.txt");
+        instance.ReadAnimal(path + "map_animal.txt");
         instance.Print(-1,-1);
     }
 
