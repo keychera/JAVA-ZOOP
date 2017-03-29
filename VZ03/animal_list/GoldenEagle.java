@@ -12,15 +12,16 @@ public class GoldenEagle extends Animal {
     position = new Location();
     classification = new Classification("Accipitridae","Aquila","chrysaetos");
     dietStatus = new DietStatus(weight,true,false);
-    habitatStatus = new HabitatStatus("air");
+    tame_status = true;
+habitatStatus = new HabitatStatus("air");
   }
 
-  @Override
+   
   public String Interact() {
 	  return "GOLDEN BAWK";
   }
 
-  @Override
+   
   public void Render() {
     System.out.print('e');
   }

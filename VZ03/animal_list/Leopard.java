@@ -12,15 +12,16 @@ public class Leopard extends Animal {
     position = new Location();
     classification = new Classification("Felidae","Panthera","pardus");
     dietStatus = new DietStatus(weight,true,false);
-    habitatStatus = new HabitatStatus("land");
+    tame_status = true;
+habitatStatus = new HabitatStatus("land");
   }
 
-  @Override
+   
   public String Interact() {
 	  return "MAJESTIC RAWR";
   }
 
-  @Override
+   
   public void Render() {
     System.out.print('l');
   }

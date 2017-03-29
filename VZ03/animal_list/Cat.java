@@ -12,16 +12,16 @@ public class Cat extends Animal {
     position = new Location();
     classification = new Classification("Felidae","Felis","Catus");
     dietStatus = new DietStatus(weight,true,false);
-    habitatStatus = new HabitatStatus("land");
     tame_status = true;
+habitatStatus = new HabitatStatus("land");
   }
 
-  @Override
+   
   public String Interact() {
     return "NYAA";
   }
 
-  @Override
+   
   public void Render() {
     System.out.print('c');
   }

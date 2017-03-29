@@ -1,4 +1,4 @@
-package animal_list;
+	package animal_list;
 
 import animal.*;
 import location.Location;
@@ -13,16 +13,16 @@ public class Coyote extends Animal{
 	    position = new Location();
 	    classification = new Classification("Canidae","Canis","latrans");
 	    dietStatus = new DietStatus(weight,true,false);
-	    habitatStatus = new HabitatStatus("land");
-	    tame_status = false;
+	    tame_status = true;
+habitatStatus = new HabitatStatus("land");
 	}
 	
-	  @Override
+	   
 	  public String Interact() {
 	    return "AGILE RAWR";
 	  }
 
-	  @Override
+	   
 	  public void Render() {
 	    System.out.print('t');
 	  }

@@ -12,15 +12,16 @@ public class Orca extends Animal {
     position = new Location();
     classification = new Classification("Delphinidae","Orcinus","orca");
     dietStatus = new DietStatus(weight,true,false);
-    habitatStatus = new HabitatStatus("water");
+    tame_status = true;
+habitatStatus = new HabitatStatus("water");
   }
 
-  @Override
+   
   public String Interact() {
 	  return "SPLASHING RAWR";
   }
 
-  @Override
+   
   public void Render() {
     System.out.print('O');
   }

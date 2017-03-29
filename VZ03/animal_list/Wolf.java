@@ -12,15 +12,16 @@ public class Wolf extends Animal {
     position = new Location();
     classification = new Classification("Canidae","Canis","lupus");
     dietStatus = new DietStatus(weight,true,false);
-    habitatStatus = new HabitatStatus("land");
+    tame_status = true;
+habitatStatus = new HabitatStatus("land");
   }
 
-  @Override
+   
   public String Interact() {
 	  return "A STANDARD RAWR";
   }
 
-  @Override
+   
   public void Render() {
     System.out.print('W');
   }

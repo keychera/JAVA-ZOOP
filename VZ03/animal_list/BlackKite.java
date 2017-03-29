@@ -12,15 +12,16 @@ public class BlackKite extends Animal {
     position = new Location();
     classification = new Classification("Accipitridae","Milvus","migrans");
     dietStatus = new DietStatus(weight,true,false);
-    habitatStatus = new HabitatStatus("air");
+    tame_status = true;
+habitatStatus = new HabitatStatus("air");
   }
 
-  @Override
+   
   public String Interact() {
 	  return "dark flip flop";
   }
 
-  @Override
+   
   public void Render() {
     System.out.print('k');
   }

@@ -12,15 +12,14 @@ public class ArcticFox extends Animal {
     position = new Location();
     classification = new Classification("Canidae","Vulpes","lagopus");
     dietStatus = new DietStatus(weight,true,false);
-    habitatStatus = new HabitatStatus("land");
+    tame_status = true;
+habitatStatus = new HabitatStatus("land");
   }
 
-  @Override
   public String Interact() {
 	  return "ARCTIC RAWR";
   }
 
-  @Override
   public void Render() {
     System.out.print('f');
   }

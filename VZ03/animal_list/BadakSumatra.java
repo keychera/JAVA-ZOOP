@@ -12,15 +12,16 @@ public class BadakSumatra extends Animal {
     position = new Location();
     classification = new Classification("Rhinocerotidae","Dicerorhinus","sumatrensis");
     dietStatus = new DietStatus(weight,true,false);
-    habitatStatus = new HabitatStatus("land");
+    tame_status = true;
+habitatStatus = new HabitatStatus("land");
   }
 
-  @Override
+   
   public String Interact() {
 	  return "IM WITH JAWA";
   }
 
-  @Override
+   
   public void Render() {
     System.out.print('S');
   }

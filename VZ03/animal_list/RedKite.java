@@ -12,15 +12,16 @@ public class RedKite extends Animal {
     position = new Location();
     classification = new Classification("Accipitridae","Milvus","milvus");
     dietStatus = new DietStatus(weight,true,false);
-    habitatStatus = new HabitatStatus("air");
+    tame_status = true;
+habitatStatus = new HabitatStatus("air");
   }
 
-  @Override
+   
   public String Interact() {
 	  return "flip flop";
   }
 
-  @Override
+   
   public void Render() {
     System.out.print('R');
   }

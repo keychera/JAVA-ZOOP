@@ -12,15 +12,16 @@ public class Biawak extends Animal {
     position = new Location();
     classification = new Classification("Varanidae","Varanus","cerambonensis");
     dietStatus = new DietStatus(weight,true,false);
-    habitatStatus = new HabitatStatus("land");
+    tame_status = true;
+habitatStatus = new HabitatStatus("land");
   }
 
-  @Override
+   
   public String Interact() {
 	  return "MORE TERRIFYING HSSS";
   }
 
-  @Override
+   
   public void Render() {
     System.out.print('b');
   }

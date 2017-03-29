@@ -12,15 +12,16 @@ public class BadakJawa extends Animal {
     position = new Location();
     classification = new Classification("Rhinocerotidae","Rhinoceros","sondaicus");
     dietStatus = new DietStatus(weight,true,false);
-    habitatStatus = new HabitatStatus("land");
+    tame_status = true;
+habitatStatus = new HabitatStatus("land");
   }
 
-  @Override
+   
   public String Interact() {
 	  return "HMM DON'T MIND ME AND MY ENDANGERED STATUS";
   }
 
-  @Override
+   
   public void Render() {
     System.out.print('J');
   }
