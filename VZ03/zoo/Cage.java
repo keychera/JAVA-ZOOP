@@ -30,6 +30,20 @@ public class Cage{
         this.area= new Location[0];
         this.Animals=new Animal[0];
     }
+    public Cage CopyCage()
+    {
+      Cage copy = new Cage(this.GetHabitat(),this.GetSize());
+      copy.NAnimal = this.NAnimal;
+      for(int i = 0;i< copy.size; i++)
+      {
+        copy.area[i] = this.area[i];
+      }
+      for(int i = 0;i< copy.NAnimal; i++)
+      {
+        copy.Animals[i]=this.Animals[i];
+      }
+      return copy;
+    }
     /**
      * construstor with parameter, this will set NAnimal to 0, size to _size, habitat to hab, Animals and area
      * @param habitat
