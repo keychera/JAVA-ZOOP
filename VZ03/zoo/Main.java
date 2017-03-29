@@ -5,6 +5,8 @@
  */
 package zoo;
 
+import java.util.Scanner;
+
 import animal_list.Cat;
 import cell.AirHabitat;
 import cell.Cell;
@@ -20,6 +22,8 @@ import tour.Tour;
  * @author Harum Lokawati
  */
 public class Main {
+
+    private static Scanner reader;
 
     /**
      * @param args the command line arguments
@@ -83,9 +87,13 @@ public class Main {
       zoo = new Zoo(6,6);
       zoo.InitializeZoo(cells);
       zoo.MakeCage();
-      Tour tour;
-      tour = new Tour(zoo,width,length);
-      int n;
-      System.in.read(n);
+      reader = new Scanner(System.in);
+      int n = reader.nextInt();
+      if(n==1)
+      {
+        zoo.Print(-1, -1);
+      }else if(n==2){
+        zoo.Print(1, 1);
+      }
     }
 }

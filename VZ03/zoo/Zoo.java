@@ -282,10 +282,10 @@ public class Zoo {
                     checked++;
                 }
                 NCages++;
-                System.out.println(NCages);
+                //System.out.println(NCages);
                 //menyimpan cage baru di C
                 Cage C = new Cage(name, i+1);
-                System.out.println(C.GetSize());
+                //System.out.println(C.GetSize());
                 for(int ar = 0; ar < (i+1); ar++){
                     Location L = new Location((queue[ar] / length),(queue[ar] % length));
                     C.GetArea()[ar] = L;
