@@ -49,23 +49,6 @@ SRC = animal_list/ArcticFox.java \
 	pathfinder/PathFinder.java \
 	pathfinder/PathLabel.java \
 	renderable/Renderable.java \
-	unit_test/AirHabitatTest.java \
-	unit_test/HabitatTest.java \
-	unit_test/RoadTest.java \
-	unit_test/Animal_test.java \
-	unit_test/LandHabitatTest.java \
-	unit_test/TestRunner.java \
-	unit_test/CageTest.java \
-	unit_test/map.txt Tour_test.java \
-	unit_test/CellTest.java \
-	unit_test/map_animal.txt WaterHabitatTest.java \
-	unit_test/EntranceTest.java \
-	unit_test/ParkTest.java \
-	unit_test/ZooTest.java \
-	unit_test/ExitTest.java \
-	unit_test/Queue_test.java \
-	unit_test/FacilityTest.java \
-	unit_test/RestaurantTest.java \
 	location/ILocation.java \
 	location/Location.java \
 	queue/Queue.java \
