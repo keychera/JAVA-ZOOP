@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package zoo;
-
+import java.util.Scanner;
 import animal_list.Cat;
 import cell.AirHabitat;
 import cell.Cell;
@@ -24,6 +24,7 @@ public class Main {
     /**
      * @param args the command line arguments
      */
+    private static Scanner reader;
     public static void main(String[] args) {
 
       /*map test 
@@ -85,7 +86,14 @@ public class Main {
       zoo.MakeCage();
       Tour tour;
       tour = new Tour(zoo,width,length);
-      int n;
-      System.in.read(n);
+      reader = new Scanner(System.in);
+      int n = reader.nextInt();
+      if(n==1)
+      {
+        zoo.Print(-1,-1);
+      }else
+      {
+        zoo.Print(1,1);
+      }
     }
 }
