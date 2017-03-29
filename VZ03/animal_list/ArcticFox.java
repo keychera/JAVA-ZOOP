@@ -13,6 +13,7 @@ public class ArcticFox extends Animal {
     classification = new Classification("Canidae","Vulpes","lagopus");
     dietStatus = new DietStatus(weight,true,false);
     habitatStatus = new HabitatStatus("land");
+    tame_status = true;
   }
 
   @Override

@@ -13,6 +13,7 @@ public class Komodo extends Animal {
     classification = new Classification("Varanidae","Varanus","komodoensis");
     dietStatus = new DietStatus(weight,true,false);
     habitatStatus = new HabitatStatus("land");
+    tame_status = true;
   }
 
   @Override

@@ -13,6 +13,7 @@ public class Wolf extends Animal {
     classification = new Classification("Canidae","Canis","lupus");
     dietStatus = new DietStatus(weight,true,false);
     habitatStatus = new HabitatStatus("land");
+    tame_status = true;
   }
 
   @Override

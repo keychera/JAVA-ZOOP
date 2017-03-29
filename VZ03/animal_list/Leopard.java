@@ -13,6 +13,7 @@ public class Leopard extends Animal {
     classification = new Classification("Felidae","Panthera","pardus");
     dietStatus = new DietStatus(weight,true,false);
     habitatStatus = new HabitatStatus("land");
+    tame_status = true;
   }
 
   @Override

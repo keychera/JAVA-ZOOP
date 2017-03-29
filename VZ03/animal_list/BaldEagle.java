@@ -13,6 +13,7 @@ public class BaldEagle extends Animal {
     classification = new Classification("Accipitridae","Haliaeetus","leucocephalus");
     dietStatus = new DietStatus(weight,true,false);
     habitatStatus = new HabitatStatus("air");
+    tame_status = true;
   }
 
   @Override

@@ -14,6 +14,7 @@ public class Axolotl extends Animal{
 	    classification = new Classification("Ambystomatidae","Ambystoma","mexicanum");
 	    dietStatus = new DietStatus(weight,true,false);
 	    habitatStatus = new HabitatStatus("water");
+	    tame_status = true;
 	}
 	
 	  @Override

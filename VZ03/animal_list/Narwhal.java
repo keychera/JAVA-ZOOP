@@ -13,6 +13,7 @@ public class Narwhal extends Animal {
     classification = new Classification("Monodontidae","Monodon","monoceros");
     dietStatus = new DietStatus(weight,true,false);
     habitatStatus = new HabitatStatus("water");
+    tame_status = true;
   }
 
   @Override

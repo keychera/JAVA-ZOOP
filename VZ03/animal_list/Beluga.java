@@ -13,6 +13,7 @@ public class Beluga extends Animal {
     classification = new Classification("Monodontidae","Delphinapterus","leucas");
     dietStatus = new DietStatus(weight,true,false);
     habitatStatus = new HabitatStatus("water");
+    tame_status = true;
   }
 
   @Override

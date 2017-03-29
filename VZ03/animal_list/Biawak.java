@@ -13,6 +13,7 @@ public class Biawak extends Animal {
     classification = new Classification("Varanidae","Varanus","cerambonensis");
     dietStatus = new DietStatus(weight,true,false);
     habitatStatus = new HabitatStatus("land");
+    tame_status = true;
   }
 
   @Override

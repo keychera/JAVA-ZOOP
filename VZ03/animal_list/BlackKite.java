@@ -13,6 +13,7 @@ public class BlackKite extends Animal {
     classification = new Classification("Accipitridae","Milvus","migrans");
     dietStatus = new DietStatus(weight,true,false);
     habitatStatus = new HabitatStatus("air");
+    tame_status = true;
   }
 
   @Override

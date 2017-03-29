@@ -13,6 +13,7 @@ public class GoldenEagle extends Animal {
     classification = new Classification("Accipitridae","Aquila","chrysaetos");
     dietStatus = new DietStatus(weight,true,false);
     habitatStatus = new HabitatStatus("air");
+    tame_status = true;
   }
 
   @Override

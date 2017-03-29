@@ -13,6 +13,7 @@ public class BadakJawa extends Animal {
     classification = new Classification("Rhinocerotidae","Rhinoceros","sondaicus");
     dietStatus = new DietStatus(weight,true,false);
     habitatStatus = new HabitatStatus("land");
+    tame_status = true;
   }
 
   @Override

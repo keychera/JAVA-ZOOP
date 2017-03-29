@@ -13,6 +13,7 @@ public class Orca extends Animal {
     classification = new Classification("Delphinidae","Orcinus","orca");
     dietStatus = new DietStatus(weight,true,false);
     habitatStatus = new HabitatStatus("water");
+    tame_status = true;
   }
 
   @Override

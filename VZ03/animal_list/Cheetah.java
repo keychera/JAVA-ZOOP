@@ -13,6 +13,7 @@ public class Cheetah extends Animal {
     classification = new Classification("Felidae","Acinonyx","jubatus");
     dietStatus = new DietStatus(weight,true,false);
     habitatStatus = new HabitatStatus("land");
+    tame_status = true;
   }
 
   @Override

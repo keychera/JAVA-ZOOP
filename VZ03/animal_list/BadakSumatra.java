@@ -13,6 +13,7 @@ public class BadakSumatra extends Animal {
     classification = new Classification("Rhinocerotidae","Dicerorhinus","sumatrensis");
     dietStatus = new DietStatus(weight,true,false);
     habitatStatus = new HabitatStatus("land");
+    tame_status = true;
   }
 
   @Override

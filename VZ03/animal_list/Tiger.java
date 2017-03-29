@@ -13,6 +13,7 @@ public class Tiger extends Animal {
     classification = new Classification("Felidae","Felis","tigris");
     dietStatus = new DietStatus(weight,true,false);
     habitatStatus = new HabitatStatus("land");
+    tame_status = true;
   }
 
   @Override

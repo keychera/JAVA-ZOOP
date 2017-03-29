@@ -1,6 +1,6 @@
 # from https://www.cs.swarthmore.edu/~newhall/unixhelp/javamakefiles.html
 
-JCC = javac
+JAVAC = javac
 JFLAGS = -g
 
 SRC = animal_list/ArcticFox.java \
@@ -61,11 +61,15 @@ SRC = animal_list/ArcticFox.java \
 # default: classes
 
 CLS= $(SRC:.java=.class)
-all: $(CLS)
+all:theZoo
+theZoo: $(CLS)
+
+clean:
+	rm -f *.class
 
 .SUFFIXES: .java .class
 .java.class:
-	$(JCC) $(JFLAGS) $*.java
+	$(JAVAC) $(JFLAGS) $*.java
 
-clean:
-	$(RM) *.class
+jar: $(CLS)
+	jar cvf theZoo.jar $(CLS)
