@@ -2,13 +2,8 @@
 
 JCC = javac
 JFLAGS = -g
-.SUFFIXES: .java .class
-.java.class:
-	$(JCC) $(JFLAGS) $*.java
 
-CLASSES = \
-	# animal_list
-	animal_list/ArcticFox.java \
+SRC = animal_list/ArcticFox.java \
 	animal_list/Beluga.java \
 	animal_list/Clownfish.java \
 	animal_list/Komodo.java \
@@ -31,8 +26,6 @@ CLASSES = \
 	animal_list/Cheetah.java \
 	animal_list/GoldenEagle.java \
 	animal_list/RedFox.java \
-
-	# animal
 	animal/Animal.java \
 	animal/HabitatStatus.java \
 	animal/IHabitatStatus.java \
@@ -41,8 +34,6 @@ CLASSES = \
 	animal/ITameStatus.java \
 	animal/DietStatus.java \
 	animal/IDietStatus.java \
-
-	# cell
 	cell/AirHabitat.java \
 	cell/Exit.java \
 	cell/LandHabitat.java \
@@ -54,16 +45,10 @@ CLASSES = \
 	cell/Entrance.java \
 	cell/Habitat.java \
 	cell/Restaurant.java \
-
-	# pathfinder
 	pathfinder/Path.java \
 	pathfinder/PathFinder.java \
 	pathfinder/PathLabel.java \
-
-	# renderable
 	renderable/Renderable.java \
-
-	# unit_test
 	unit_test/AirHabitatTest.java \
 	unit_test/HabitatTest.java \
 	unit_test/RoadTest.java \
@@ -81,26 +66,23 @@ CLASSES = \
 	unit_test/Queue_test.java \
 	unit_test/FacilityTest.java \
 	unit_test/RestaurantTest.java \
-
-	# location
 	location/ILocation.java \
 	location/Location.java \
-
-	# queue
 	queue/Queue.java \
 	queue/QueueItem.java \
-
-	# tour
 	tour/Tour.java \
-
-	# zoo
 	zoo/Cage.java \
 	zoo/Main.java \
 	zoo/Zoo.java 
 
-default: classes
+# default: classes
 
-classes: $(CLASSES:.java=.class)
+CLS= $(SRC:.java=.class)
+all: $(CLS)
+
+.SUFFIXES: .java .class
+.java.class:
+	$(JCC) $(JFLAGS) $*.java
 
 clean:
 	$(RM) *.class
