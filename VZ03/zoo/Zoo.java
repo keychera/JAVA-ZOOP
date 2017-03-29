@@ -9,7 +9,6 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.RandomAccessFile;
 import java.nio.charset.Charset;
 import java.util.Random;
 import location.Location;
@@ -21,7 +20,7 @@ import location.Location;
  */
 
 public class Zoo {
-    public static final int DEFSIZE = 10;
+    public static final int DEFSIZE = 16;
     private Cell[] Cells;   ///< array of Cell*
     private Cage[] Cages;   ///< array of Cage*
     private int NCages;     ///< number of cage
@@ -70,7 +69,6 @@ public class Zoo {
      */
     public void ReadZoo(String filename) throws FileNotFoundException, IOException
     {
-        int panjang;
         int i = 0;
         int j = 0;
         int templength = 0;
@@ -284,26 +282,31 @@ public class Zoo {
                     checked++;
                 }
                 NCages++;
+                System.out.println(NCages);
                 //menyimpan cage baru di C
-                Cage C = new Cage(name, i + 1);
-                for(int ar = 0; ar < (i + 1); ar++){
+                Cage C = new Cage(name, i+1);
+                System.out.println(C.GetSize());
+                for(int ar = 0; ar < (i+1); ar++){
                     Location L = new Location((queue[ar] / length),(queue[ar] % length));
                     C.GetArea()[ar] = L;
+                    //System.out.format("%d,%d\n", C.GetArea()[ar].x,C.GetArea()[ar].y);
                 }
+                //this.Cages[this.NCages-1]=C;
+                
                 //membuat array temp untuk menyimpan cage lama
                 Cage[] temp = new Cage[NCages];
                 int p;
                 for( p = 0; p < (NCages - 1); p++)
                 {
-                  temp[p] = Cages[p];
+                  temp[p] = this.Cages[p].CopyCage();
                 }
                 temp[p] = C;
                 //System.arraycopy(Cages, 0, temp, 0, NCages - 1); 
                 //menginisialisasi ukuran baru dan memaskkan temp ke cages
-                Cages = new Cage[NCages];
-                for(i = 0; i < NCages; i++)
+                this.Cages = new Cage[this.NCages];
+                for(i = 0; i < this.NCages; i++)
                 {
-                  Cages[i] = temp[i];
+                  this.Cages[i] = temp[i].CopyCage();
                 }
                 //System.arraycopy(temp, 0, Cages, 0, NCages);
             }
@@ -330,20 +333,21 @@ public class Zoo {
         String str;
           while((str = reader.readLine()) != null && (str.length() != 0)) {
             hewan = str.charAt(0);
-            n_hewan = ((int) str.charAt(1));
+            n_hewan = ((int) str.charAt(1) - 48);
             Animal A;
             for(int i = 1; i <= n_hewan; i++)
             {
+                System.out.println(hewan);
                 if(hewan == 'c')
                 {
                   A = new Cat();
-                }/*else if(hewan == 'C')
+                }else if(hewan == 'C')
                 {
                   A = new Cheetah();
-                }else if(hewan == 'L')
+                }/*else if(hewan == 'L')
                 {
                   A = new Lion();
-                }else if(hewan == 'l')
+                }*/else if(hewan == 'l')
                 {
                   A = new Leopard();
                 }else if(hewan == 'T')
@@ -403,8 +407,7 @@ public class Zoo {
                 }else
                 {
                   A = new Axolotl();
-                }*/
-                A = new Cat();
+                }
                 AddAnimaltoZoo(A);
           }
         }

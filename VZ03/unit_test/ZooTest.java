@@ -5,7 +5,6 @@
  */
 package unit_test;
 
-import animal.Animal;
 import animal_list.Cat;
 import cell.AirHabitat;
 import cell.Cell;
@@ -14,11 +13,7 @@ import cell.Exit;
 import cell.LandHabitat;
 import cell.Road;
 import cell.WaterHabitat;
-import tour.Tour;
-import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import zoo.Cage;
@@ -184,6 +179,19 @@ public class ZooTest {
         Zoo instance = new Zoo();
         instance.ReadZoo("E:/Tubes OOP/JAVA-ZOOP/VZ03/zoo/map.txt");
         instance.MakeCage();
+        instance.Print(-1,-1);
+        Cage[] result = instance.GetCages();
+        System.out.println(instance.GetNCages());
+        for(int j = 0; j < instance.GetNCages(); j++)
+        {
+          System.out.format("%d : ",j);
+          System.out.print(result[j].GetSize());
+          for(int i = 0; i < result[j].GetSize(); i++)
+          {
+            System.out.format("(%d,%d)", result[j].GetArea()[i].x,result[0].GetArea()[i].y);
+          }
+          System.out.println();
+        }
         instance.ReadAnimal("E:/Tubes OOP/JAVA-ZOOP/VZ03/zoo/map_animal.txt");
         instance.Print(-1,-1);
     }
