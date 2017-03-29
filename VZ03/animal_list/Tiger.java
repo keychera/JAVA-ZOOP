@@ -3,26 +3,25 @@ package animal_list;
 import animal.*;
 import location.Location;
 
-public class Cat extends Animal {
-  public Cat(){
+public class Tiger extends Animal {
+  public Tiger(){
     this(10);
   }
   
-  public Cat(int weight){
+  public Tiger(int weight){
     position = new Location();
-    classification = new Classification("Felidae","Felis","Catus");
+    classification = new Classification("Felidae","Felis","tigris");
     dietStatus = new DietStatus(weight,true,false);
     habitatStatus = new HabitatStatus("land");
-    tame_status = true;
   }
 
   @Override
   public String Interact() {
-    return "NYAA";
+	  return "COURAGEOUS RAWR";
   }
 
   @Override
   public void Render() {
-    System.out.print('c');
+    System.out.print('T');
   }
 }

@@ -50,6 +50,10 @@ abstract public class Animal extends Renderable implements ILocation, IClassific
     return dietStatus.weight;
   }
   
+  public void SetWeight(int weight){
+    this.dietStatus.weight = weight;
+  }
+  
   public boolean IsCarnivore(){
     return dietStatus.meat_diet && !dietStatus.plant_diet;
   }

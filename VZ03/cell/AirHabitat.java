@@ -1,10 +1,9 @@
 package cell;
-/**
- *
+/*
  * Class AirHabitat
  * public class AirHabitat of Cell as a component of the zoo
- * @author	Harum Lokawati
- * @since	March 2017
+ * @author      Harum Lokawati
+ * @since       March 2017
  * @version     VZ03
  * 
  */
@@ -14,8 +13,7 @@ public class AirHabitat extends Habitat{
      * this will construct Habitat
      * @
      */
-    public AirHabitat()
-    {
+    public AirHabitat(){
         super();
     }
     /**
@@ -23,16 +21,14 @@ public class AirHabitat extends Habitat{
      * fuction to print 
      * @see Renderable
      */
-    public void Render()
-    {
+    public void Render(){
         System.out.print("*");
     }
     /**
      * type getter 
      * @return String "AirHabitat"
      */
-    public String GetType()
-    {
+    public String GetType(){
         return "AirHabitat";
     }
 };
